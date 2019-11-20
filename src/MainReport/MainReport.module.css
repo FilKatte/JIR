@@ -1,0 +1,138 @@
+@media print {
+  .gap {
+    page-break-before: always;
+  }
+  .jir {
+    page-break-after: always;
+  }
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.image {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+.jir {
+  width: 60px;
+  display: block;
+  margin: 10px auto;
+}
+
+.platform {
+  display: block;
+  margin: 10px auto;
+}
+
+p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.6px;
+}
+
+.pGreen {
+  color: rgb(53, 196, 53);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pRed {
+  color: rgb(231, 98, 21);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.pBlue {
+  color: rgb(107, 202, 247);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 840px;
+  margin: 0 auto 20px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+th {
+  border: 1px solid black;
+  height: 50px;
+}
+
+td {
+  border: 1px solid black;
+  width: 120px;
+  padding: 10px;
+}
+
+.pTd {
+  margin-bottom: 10px;
+}
+
+.coating {
+  text-align: left;
+}
+
+.mainTh {
+  text-align: center;
+  background: yellow;
+  color: red;
+}
+
+.blueTh {
+  color: rgb(84, 185, 231);
+}
+
+.title {
+  font-size: 30px;
+  margin: 0 auto 30px auto;
+}
+
+.component {
+  display: block;
+  margin: 0 auto;
+}
+.component_text {
+  font-size: 12px;
+  width: 800px;
+  margin: 5px auto 0 auto;
+}
+
+.riser {
+  margin-bottom: 30px;
+}
+
+.subTable {
+  border: none;
+  width: 420px;
+}
+
+.subTable th {
+  border: 1px solid black;
+  height: 50px;
+}
+
+.subTable td {
+  border: 1px solid black;
+  width: 60px;
+  padding: 6px;
+}
+
+.well {
+  border: none;
+}

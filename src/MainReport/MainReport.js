@@ -3,26 +3,27 @@ import styles from "./MainReport.module.css";
 import fieldWood from "./assets/fieldWood.jpeg";
 import platform from "./assets/platform.jpg";
 import jir from "./assets/jir.png";
+import scheme from "./assets/scheme.jpg";
 
 class MainReport extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.image}>
-          <img src={fieldWood} alt="logo" className={styles.logo} />
-        </div>
-        <p className={styles.pGreen}>API RP 2A Level I Survey 2019</p>
-        <p className={styles.pRed}>SS0253‐E</p>
-        <p className={styles.pBlue}>lease PROD</p>
+        <div className={styles.page}>
+          <div className={styles.image}>
+            <img src={fieldWood} alt="logo" className={styles.logo} />
+          </div>
+          <p className={styles.pGreen}>API RP 2A Level I Survey 2019</p>
+          <p className={styles.pRed}>SS0253‐E</p>
+          <p className={styles.pBlue}>lease PROD</p>
 
-        {/*2. General Platform info (including list of wells and pipelines)*/}
-        <div className={styles.image}>
-          <img src={platform} alt="platform" className={styles.platform} />
-        </div>
-        <div className={styles.image}>
+          <div className={styles.image}>
+            <img src={platform} alt="platform" className={styles.platform} />
+          </div>
+
           <img src={jir} alt="jir" className={styles.jir} />
         </div>
-
+        {/*2. General Platform info (including list of wells and pipelines)*/}
         <div className={styles.image}>
           <img src={platform} alt="platform" className={styles.platform} />
           <p className={styles.image_text}>North</p>
@@ -56,12 +57,18 @@ class MainReport extends React.Component {
         <table className={styles.gap}>
           <tbody>
             <tr>
-              <th colSpan="3">Fieldwood Energy</th>
+              <th colSpan="3" className={styles.hBlue}>
+                Fieldwood Energy
+              </th>
               <th colSpan="1">BSEE DATABASES</th>
-              <th colSpan="3">SS0253‐E</th>
+              <th colSpan="3" className={styles.hRed}>
+                SS0253‐E
+              </th>
             </tr>
             <tr>
-              <th colSpan="7">Platform</th>
+              <th colSpan="7" className={styles.hGreen}>
+                Platform
+              </th>
             </tr>
             <tr>
               {platforms.slice(0, 7).map(obj => (
@@ -97,7 +104,9 @@ class MainReport extends React.Component {
             </tr>
 
             <tr>
-              <th colSpan="7">Pipelines</th>
+              <th colSpan="7" className={styles.hGreen}>
+                Pipelines
+              </th>
             </tr>
             <tr>
               {Pipelines.slice(0, 7).map((item, id) => (
@@ -116,7 +125,9 @@ class MainReport extends React.Component {
             </tr>
 
             <tr>
-              <th colSpan="7">Wells</th>
+              <th colSpan="7" className={styles.hGreen}>
+                Wells
+              </th>
             </tr>
             <tr>
               <th>Well Name</th>
@@ -125,14 +136,6 @@ class MainReport extends React.Component {
             </tr>
 
             {Wells.slice(0, 8).map(obj => (
-              <tr key={obj.id}>
-                <td>{obj.name}</td>
-                <td>{obj.Status}</td>
-                <td>{obj.Updated}</td>
-              </tr>
-            ))}
-
-            {Wells.slice(7, 15).map(obj => (
               <tr key={obj.id}>
                 <td>{obj.name}</td>
                 <td>{obj.Status}</td>
@@ -171,7 +174,7 @@ class MainReport extends React.Component {
           <tbody>
             <tr>
               <th colSpan="7" className={styles.mainTh}>
-                Mechanical Damage
+                <span className={styles.sGreen}>Mechanical Damage</span>
               </th>
             </tr>
             <tr className={styles.blueTh}>
@@ -194,7 +197,7 @@ class MainReport extends React.Component {
         <table className={styles.gap}>
           <tbody>
             <tr>
-              <th colSpan="7" className={styles.mainTh}>
+              <th colSpan="7" className={styles.sGreen}>
                 Pipeline Risers
               </th>
             </tr>
@@ -231,7 +234,7 @@ class MainReport extends React.Component {
         <table>
           <tbody>
             <tr>
-              <th colSpan="7" className={styles.mainTh}>
+              <th colSpan="7" className={styles.sGreen}>
                 Pipeline Riser Clamps
               </th>
             </tr>
@@ -262,7 +265,7 @@ class MainReport extends React.Component {
         <table className={styles.gap}>
           <tbody>
             <tr>
-              <th colSpan="7" className={styles.mainTh}>
+              <th colSpan="7" className={styles.sGreen}>
                 Cathodic Potential Readings
               </th>
             </tr>
@@ -294,7 +297,7 @@ class MainReport extends React.Component {
         <table className={styles.gap}>
           <tbody>
             <tr>
-              <th colSpan="7" className={styles.mainTh}>
+              <th colSpan="7" className={styles.sGreen}>
                 Conductors
               </th>
             </tr>
@@ -336,6 +339,11 @@ class MainReport extends React.Component {
             ))}
           </tbody>
         </table>
+
+        {/*11. Autocad photo*/}
+        <div className={styles.image}>
+          <img src={scheme} alt="scheme" className={styles.scheme} />
+        </div>
 
         {/*11. All photos from Component Surveys*/}
         <div className={styles.gap}>

@@ -1,12 +1,30 @@
 @media print {
-  .gap {
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 5mm 0mm 10mm 5mm;
+  }
+  ul,
+  img {
+    page-break-inside: avoid;
+  }
+  .gap,
+  .scheme {
     page-break-before: always;
   }
-  .jir {
+  .jir,
+  .scheme {
     page-break-after: always;
   }
 }
 
+.page {
+  width: 976px;
+  height: 1194px;
+  margin: 10px auto;
+  position: relative;
+}
 .container {
   width: 1024px;
   margin: 0 auto;
@@ -17,15 +35,22 @@
 }
 
 .logo {
-  width: 200px;
+  width: 300px;
   display: block;
-  margin: 10px auto;
+  margin: 100px auto 20px auto;
 }
 
 .jir {
-  width: 60px;
+  width: 80px;
   display: block;
-  margin: 10px auto;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+
+.scheme {
+  display: block;
+  margin: 0 auto;
 }
 
 .platform {
@@ -43,24 +68,42 @@ p {
   color: rgb(53, 196, 53);
   font-weight: 700;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .pRed {
   color: rgb(231, 98, 21);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 40px;
   margin-bottom: 30px;
 }
 
 .pBlue {
   color: rgb(107, 202, 247);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
+.hBlue {
+  color: rgb(26, 95, 243);
+  font-weight: 700;
+  font-size: 20px;
+}
+.hRed {
+  color: rgb(231, 98, 21);
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.hGreen {
+  color: rgb(53, 196, 53);
+  font-weight: 700;
+  font-size: 20px;
+}
+
 table {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-collapse: collapse;
   width: 840px;
   margin: 0 auto 20px auto;
@@ -70,12 +113,13 @@ table {
 }
 
 th {
-  border: 1px solid black;
+  border: 1px solid gray;
   height: 50px;
+  padding: 10px;
 }
 
 td {
-  border: 1px solid black;
+  border: 1px solid gray;
   width: 120px;
   padding: 10px;
 }
@@ -92,10 +136,6 @@ td {
   text-align: center;
   background: yellow;
   color: red;
-}
-
-.blueTh {
-  color: rgb(84, 185, 231);
 }
 
 .title {
@@ -117,6 +157,9 @@ td {
   margin-bottom: 30px;
 }
 
+.blueTh {
+  color: rgb(84, 185, 231);
+}
 .subTable {
   border: none;
   width: 420px;
